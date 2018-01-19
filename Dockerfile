@@ -4,8 +4,8 @@ MAINTAINER 15244909057.ww@gmail.com
 RUN \
   apt-get update && \
   apt-get -y upgrade && 
-  apt-get install subversion g++ zlib1g-dev build-essential git python rsync man-db && \
-  apt-get install libncurses5-dev gawk gettext unzip file libssl-dev wget vim && \
+  apt-get -y install subversion g++ zlib1g-dev build-essential git python rsync man-db && \
+  apt-get -y install libncurses5-dev gawk gettext unzip file libssl-dev wget vim && \
   rm -rf /var/lib/apt/lists/* 
 
 WORKDIR /
@@ -17,7 +17,7 @@ RUN \
   ./scripts/feeds install -a
 
 
-#允许使用root进行编译
+#脭脢脨铆脢鹿脫脙root陆酶脨脨卤脿脪毛
 ENV FORCE_UNSAFE_CONFIGURE 1
 
 WORKDIR /lede
